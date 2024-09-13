@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .profile-creater {
+        display: grid;
+        grid-template-columns: 0.8fr 1.6fr 0.7fr;
+    }
+</style>
+
+
+    <h1>{{user.username}} </h1>          
+
+
+
+    <div  class="profile-creater">
+
+        <div>
+            {% include 'base/topics_component.html' %}
+        </div>
+        <div>
+            {% include 'base/feed_component.html' %}
+
+        </div>
+        <div>
+            {% include 'base/activity_component.html' %}
+        </div>
+    </div>
+{% endblock %}

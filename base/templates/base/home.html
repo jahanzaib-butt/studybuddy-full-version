@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: 0.8fr 1.6fr 0.7fr;
+
+    }
+
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>home</h1>
+
+<div  class="container">
+    <div>
+        {% include 'base/topics_component.html' %}
+    </div>
+    <div>
+        <h5>{{room_count}} Room availaible</h5>
+        <a href="{% url 'create-room' %}">create room</a>
+
+        {% include  'base/feed_component.html' %}
+
+    </div>
+  
+    <div>
+        {% include 'base/activity_component.html' %}
+
+        
+    </div>
+</div>
+
+{% endblock %}
